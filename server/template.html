@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>oauth2 sample</title>
+</head>
+<body>
+  {{ if eq .Authenticated false }}
+    not authenticated<br/>
+    <a href="/connect_github">connect by github</a>
+  {{ else }}
+    authenticated<br/>
+    <a href="/disconnect">disconnect</a>
+    <ul>
+      <li>Authenticated as: {{ .User }}</li>
+      <li>GRPC session ID: <span id="grpc-session-id">{{ .GRPCSessionID }}</span></li>
+    </ul>
+  {{ end }}
+  <a id="trigger" href="#">Call commands!</a>
+  <p id="output"></p>
+  <script src="./static/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+package proto;
+
+option go_package = "github.com/llamerada-jp/oauth2-grpc-sample/proto";
+
+service Commands {
+  rpc UnaryRPC (UnaryRequest) returns (UnaryResponse);
+  rpc ServerStreamRPC (ServerStreamRequest) returns (stream ServerStreamResponse);
+}
+
+message UnaryRequest {
+  string message = 1;
+}
+
+message UnaryResponse {
+  string message = 1;
+}
+
+message ServerStreamRequest {
+  string message = 1;
+}
+
+message ServerStreamResponse {
+  string message = 1;
+}

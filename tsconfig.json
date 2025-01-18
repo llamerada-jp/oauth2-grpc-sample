@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "sourceMap": true,
+    "target": "es2020",
+    "module": "ESNext",
+    "strict": true,
+    "lib": [
+      "ES2020",
+      "dom",
+    ]
+  },
+  "include": [
+    "ts/**/*.ts"
+  ],
+  "files": [
+    "ts/main.ts"
+  ]
+}

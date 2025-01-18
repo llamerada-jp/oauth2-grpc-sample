@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+package proto;
+
+option go_package = "github.com/llamerada-jp/oauth2-grpc-sample/proto";
+
+service Authenticate {
+  rpc Signin (SigninRequest) returns (SigninResponse) {}
+  rpc GetSessionInfo (GetSessionInfoRequest) returns (GetSessionInfoResponse) {}
+}
+
+message SigninRequest {
+}
+
+message SigninResponse {
+  string user_code = 1;
+  string verification_uri = 2;
+  string signin_id = 3;
+}
+
+message GetSessionInfoRequest {
+  string signin_id = 1;
+}
+
+message GetSessionInfoResponse {
+  string session_id = 1;
+}

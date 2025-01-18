@@ -1,2 +1,2 @@
-# oidc-grpc-sample
-A sample of OIDC for gRPC base service
+# oauth2-grpc-sample
+A sample of oauth2(github) for gRPC base service
